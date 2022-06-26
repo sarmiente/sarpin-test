@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: 'Rubik', sans-serif;
+}
+body {
+  @apply bg-white-500;
+}
+p {
+  @apply text-black-500;
+}
+.animation-hover:after {
+  background: none repeat scroll 0 0 transparent;
+  content: '';
+  height: 2px;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  @apply w-0 bg-blue-500 left-1/2 block bottom-0 absolute;
+}
+.animation-active:after {
+  @apply left-0 w-full;
+}
+.animation-hover:hover:after {
+  @apply left-0 w-full;
+}
+#what {
+  display: inline;
+}
+
+/* Slideshow */
+.slick-dots li {
+  @apply inline-block;
+}
+.slick-dots span {
+  @apply bg-gray-500;
+}
+.slick-dots .slick-active span {
+  @apply bg-blue-500 rounded-l-full rounded-r-full w-10;
+}
